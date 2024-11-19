@@ -6,9 +6,9 @@ import numpy as np
 # Initialize the app
 app1 = FastAPI()  # Changed the app name to app1
 
+scaler = joblib.load('scaler1.joblib')    # Replace with the path to your saved scaler if scaling was used
 # Load the trained model and scaler
 model = joblib.load('svm_model1.joblib')  # Replace with the path to your saved model
-scaler = joblib.load('scaler1.joblib')    # Replace with the path to your saved scaler if scaling was used
 
 # Define the input data schema
 class ModelInput(BaseModel):
